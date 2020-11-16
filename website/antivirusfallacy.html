@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Antivirus Fallacy</title>
+  </head>
+  <body>
+    <header>
+      <div id="navbar">
+        <a href="index.html"><img src="aleri2.svg" id="logo" /></a>
+        <div id="navigation">
+          <a href="articles.html">Articles</a> <a href="gallery.html">Gallery</a> <a href="links.html">Useful&ensp;links</a> <a href="donate.html">Donate</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="content">
+        <h1>Antivirus Fallacy</h1>
+
+        <p>Antiviruses are one of the most widely installed classes of software. They are supposed to provide protection from various types of malicious software, but in reality they are not very useful nor required for this. This article is about principles of antivirus operation, why you likely don't need one and the situations in which an antivirus is indeed useful.</p>
+
+        <p>There are two primary working principles behind antiviruses: signature detection and heuristics. Signature detection works based on comparing a file against a database of known malicious samples. This method is fast, simple to implement, but is only able to detect malware that already has been discovered and added to database. The other malware detection method is heuristics. It is based on analysis of the suspected program's behaviour, and includes, but is not limited to running the program in a sandbox environment, looking at system calls made by the program, and using machine learning techniques to classify software as malicious. This method can be used to detect malware that is absent from signature database, but requires significant computing resources.</p>
+
+        <h2>So, why is an antivirus not always needed?</h2>
+
+        <p>The main reason is that protection provided by the antivirus comes with certain drawbacks, and can generally be achieved without using an antivirus. The first and most obvious problem is performance: an antivirus is constanly running in the background and using valuable system resources. Another problem is false positives and negatives: antiviruses often fail to recognize malicious files as malware, as well as falsely detect malware in non-malicious programs. One more problem is the fact that the antivirus may contain security vulnerabilities, which can cause system damage and malware execution, something that an antivirus is intended to prevent.</p>
+
+        <h2>In order to protect the computer from viruses without an antivirus, certain measures have to be taken:</h2>
+
+        <ul>
+          <li>Avoid downloading and running random executables from the web</li>
+          <li>In case when using an untrusted program is needed, upload it to a website such as virustotal.com for scanning it with multiple malware detection engines</li>
+          <li>Keep your operating system and software updated. This will help having security vulnerabilities fixed as they are discovered</li>
+          <li>Avoid using abandoned software. Vulnerabilities that are found in it do not get any fixes</li>
+          <li>Use a firewall to block network attacks</li>
+          <li>Use a browser addon such as NoScript to block exploitable content such as JavaScript and fonts on untrusted websites</li>
+        </ul>
+
+        <h2>Who does actually need an antivirus?</h2>
+
+        <h3>File sharing services, email providers</h3>
+        <p>Malware is often distributed via email attachments and file sharing and transfer services. Running an antivirus on an email or file sharing server is a great way to suppress propagation of malware.</p>
+        <h3>Large commercial companies</h3>
+        <p>Commercial companies are targeted by malware a lot more than individuals, either by attackers who use malware to extort money from these companies, or by other companies who hire attackers to harm their competitors. It is worth for companies to invest into an antivirus to protect themselves from malware which could lead to massive losses.</p>
+        <br />
+        <p>Available as a video <a href="https://www.youtube.com/watch?v=O9VjYXLjD7M">here</a></p>
+      </div>
+    </main>
+    <footer>
+      <div id="links"><a href="https://www.youtube.com/channel/UCuImP19ij3_Bt5-Z-Cg3Rtw">Youtube</a> <a href="https://www.reddit.com/user/alerikaisattera/">Reddit</a> <a href="https://github.com/alerikaisattera">Github</a> <a href="https://gitlab.com/alerikaisattera">Gitlab</a></div>
+      <div id="copyright">© 2020 Aleri Kaisattera. All rights reserved</div>
+    </footer>
+  </body>
+</html>
