@@ -64,10 +64,12 @@ p {
   grid-template-rows:    200px;
 }
 
-.gallery_item {
+.gallery_item_v {
   height: 200px;
+  margin: 0 auto;
 }
 
-.gallery_item2 {
+.gallery_item_h {
   width: 200px;
+  margin: auto;
 }
