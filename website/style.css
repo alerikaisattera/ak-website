@@ -13,6 +13,11 @@ p {
   text-indent: 25px;
 }
 
+code {
+  color: #cccccc;
+  font-size: 15px;
+}
+
 #navbar {
   width: 900px;
   margin: 0 auto;

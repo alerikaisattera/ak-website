@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Linux directory structure</title>
+  </head>
+  <body>
+    <header>
+      <div id="navbar">
+        <a href="index.html"><img src="aleri2.svg" id="logo" /></a>
+        <div id="navigation">
+          <a href="articles.html">Articles</a> <a href="gallery.html">Gallery</a> <a href="links.html">Useful&ensp;links</a> <a href="donate.html">Donate</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="content">
+        <h1>Linux directory structure</h1>
+
+        <p>In order to understand Linux directory structure, you need to know 2 things:</p>
+
+        <p>First, in Linux, everything is a file. This means that software can interact with anything as if it was a file: interacting with hardware, with other programs, getting information about the system is implemented as reading or writing to files.</p>
+
+        <p>Second, Linux does not create a separate directory for each drive partition. Instead, partitions can be mounted anywhere in the directory structure. For instance, it is common to place <code>/home</code> directory on separate partition.</p>
+
+        <p>Some specific details may vary across different Linux systems, but general layout is similar.</p>
+
+        <ul>
+          <li><code>/bin</code> - binaries. This directory contains the software that can be used by all users. On most modern systems, it has been replaced with <code>/usr/bin</code>, and <code>/bin</code> is made a link to it for compatibility.</li>
+
+          <li><code>/boot</code> - contains files that are required for the system to boot: bootloader, kernel images and initial ramdisks.</li>
+
+          <li><code>/dev</code> - device files. Every device connected to the system is represented as a file in <code>/dev</code>, and input/output operations are realized as reading and writing to device files.</li>
+
+          <li><code>/etc</code> - system-wide configuration files.</li>
+
+          <li><code>/home</code> - users' home directories. Each user has a home directory, where personal user data and user-specific configuration settings are stored.</li>
+
+          <li><code>/lib</code> - libraries. This directory contains libraries that are required for programs to run. On modern systems, it typically links to <code>/usr/lib</code>.</li>
+
+          <li><code>/media</code> - external drives that are mounted automatically. On many Linux systems, this is replaced by <code>/run/media</code>.</li>
+
+          <li><code>/mnt</code> - for manual mounting of exteral drives.</li>
+
+          <li><code>/opt</code> - optional. This is for manually installed software.</li>
+
+          <li><code>/proc</code> - processes. Contains information about processes that are running on the system.</li>
+
+          <li><code>/root</code> - root user's home directory.</li>
+
+          <li><code>/run</code> - runtime. Stores runtime information for software that starts early in the boot process. As mentioned earlier, <code>/run/media</code> subdirectory is used on some Linux systems for mounting storage devices.</li>
+
+          <li><code>/sbin</code> - system binaries. Contains software that is only used by the root user. On most modern systems, this is a link to <code>/usr/bin</code> or <code>/usr/sbin</code>.</li>
+
+          <li><code>/srv</code> - used by web servers running on the system. On a desktop system running Linux, this will probably be empty.</li>
+
+          <li><code>/sys</code> - system. This directory contains files that are used as an interface to the kernel.</li>
+
+          <li><code>/tmp</code> - temporary. Stores temporary files that are deleted on shutdown or reboot.</li>
+
+          <li><code>/usr</code> - universal or Unix system resources. This directory contains software and other files that are installed by package manager.</li>
+
+          <li><code>/var</code> - variable. This directory contains files that are expected to change size during system operation, such as logs and caches.</li>
+        </ul>
+        <br />
+        <p>Available as video <a href="https://youtube.com/watch?v=64JmiXER_xY">here</a></p>
+        <br />
+        <p>2020/12/17</p>
+      </div>
+    </main>
+    <footer>
+      <div id="links"><a href="https://www.youtube.com/channel/UCuImP19ij3_Bt5-Z-Cg3Rtw">Youtube</a> <a href="https://www.reddit.com/user/alerikaisattera/">Reddit</a> <a href="https://github.com/alerikaisattera">Github</a> <a href="https://gitlab.com/alerikaisattera">Gitlab</a></div>
+      <div id="copyright">© 2020 Aleri Kaisattera. All rights reserved</div>
+    </footer>
+  </body>
+</html>
