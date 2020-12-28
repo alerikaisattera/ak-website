@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Timeshift backup utility for Linux</title>
+  </head>
+  <body>
+    <header>
+      <div id="navbar">
+        <a href="index.html"><img src="aleri2.svg" id="logo" /></a>
+        <div id="navigation">
+          <a href="articles.html">Articles</a> <a href="gallery.html">Gallery</a> <a href="links.html">Useful&ensp;links</a> <a href="donate.html">Donate</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="content">
+        <h1>Timeshift backup utility for Linux</h1>
+        
+        <p>Sometimes updaitng your Linux system or editing some configuration settings can cause it to break. <a href="https://teejeetech.in/timeshift/">Timeshift</a> backup utility provides a way to restore the system if this happens.</p>
+        
+        <img src="images/timeshift1.png" />
+        
+        <h2>Configuration</h2>
+        
+        <p>When running Timeshift for the first time, it will ask for configuration.</p>
+        
+        <p>If you are using BTRFS file system, choose BTRFS, otherwise choose RSYNC.</p>
+        
+        <img src="images/timeshift2.png" />
+        
+        <p>Choose disk partition where snapshots will be stored.</p>
+        
+        <img src="images/timeshift3.png" />
+        
+        <p>It is possible to make it automatically create snapshots on a schedule, but I do not use it.</p>
+        
+        <img src="images/timeshift4.png" />
+        
+        <p>By default, it excludes user home directories from snapshots.</p>
+        
+        <p>If some update or configuration change causes your system to break, select a snapshot and hit "Restore"</p>
+        
+        <img src="images/timeshift5.png" />
+        
+        <br />
+        <p>Available as video <a href="https://youtube.com/watch?v=57X2fdBgnlI">here</a></p>
+        <br />
+        <p>2020/12/28</p>
+      </div>
+    </main>
+    <footer>
+      <div id="links"><a href="https://www.youtube.com/channel/UCuImP19ij3_Bt5-Z-Cg3Rtw">Youtube</a> <a rel="me" href="https://fosstodon.org/@alerikaisattera">Mastodon</a> <a href="https://www.reddit.com/user/alerikaisattera/">Reddit</a> <a href="https://github.com/alerikaisattera">Github</a> <a href="https://gitlab.com/alerikaisattera">Gitlab</a></div>
+      <div id="copyright">© 2020 Aleri Kaisattera. All rights reserved</div>
+    </footer>
+  </body>
+</html>
