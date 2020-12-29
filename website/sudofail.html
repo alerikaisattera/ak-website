@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Sometimes sudo seems to not work</title>
+  </head>
+  <body>
+    <header>
+      <div id="navbar">
+        <a href="index.html"><img src="aleri2.svg" id="logo" /></a>
+        <div id="navigation">
+          <a href="articles.html">Articles</a> <a href="gallery.html">Gallery</a> <a href="links.html">Useful&ensp;links</a> <a href="donate.html">Donate</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="content">
+        <h1>Sometimes sudo seems to not work</h1>
+
+        <p>Sudo is a program that is often used to gain root access in a safer way than logging in as root user. In some situations, however, using sudo may fail, requiring root login to perform the operation. This article describes one of such situations and a workaround that requires no root login.</p>
+
+        <p>As an example, I will use <code>echo 1 &gt; /sys/class/leds/input2::capslock/brightness</code> command. Running this command should light up "Caps Lock" indicator on the keyboard. Trying to run this command with sudo fails with <code>Permission denied</code> message, while running it from root shell works fine.</p>
+
+        <h2>Why does this happen?</h2>
+
+        <p>Running <code>sudo echo "1" &gt; /sys/class/leds/input2::capslock/brightness</code> does not actually allow to write to that file with root permission, as this command contains output redirection (<code>&gt;</code>), that is performed by command line shell running as user, rather than by <code>echo</code> command that is running as root.</p>
+
+        <h2>Workaround</h2>
+
+        <p>In order to run a command like this without root login writing to the file with root access is required. One way to accomplish this is running just a single command as root using <code>bash -c</code>: <code>sudo bash -c "echo 1 &gt; /sys/class/leds/input2::capslock/brightness"</code>. This will run the command with a root shell and return the operation to normal user shell.</p>
+
+        <p>Another way to do this is piping the output of echo into some command that will write to the file with root access, such as <code>tee</code>: <code>echo 1 | sudo tee /sys/class/leds/input2::capslock/brightness</code></p>
+        
+        <br />
+        <p>Available as video <a href="https://youtube.com/watch?v=X4CEYCTOMLw">here</a></p>
+        <br />
+        <p>2020/12/29</p>
+      </div>
+    </main>
+    <footer>
+      <div id="links"><a href="https://www.youtube.com/channel/UCuImP19ij3_Bt5-Z-Cg3Rtw">Youtube</a> <a rel="me" href="https://fosstodon.org/@alerikaisattera">Mastodon</a> <a href="https://www.reddit.com/user/alerikaisattera/">Reddit</a> <a href="https://github.com/alerikaisattera">Github</a> <a href="https://gitlab.com/alerikaisattera">Gitlab</a></div>
+      <div id="copyright">© 2020 Aleri Kaisattera. All rights reserved</div>
+    </footer>
+  </body>
+</html>
